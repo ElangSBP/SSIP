@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+        <title>Login page</title>
+        <?php require('../dbcon.php'); ?>
+        <title>Login Form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="login">
+            <form method="post" action="register.php">
+                <h2>Register</h2>
+                <fieldset>
+                    <input class="long" name="username" required="required" type="text" placeholder="Username" /><br /><br />
+                    <input name="password" required="required" type="password" placeholder="Password"/><br /><br />
+                    <input name="password2" required="required" type="password" placeholder="Type password again"/><br /><br />
+                    <input name="email" required="required" type="email" placeholder="Email"/><br /><br />
+                    <input name="name" required="required" type="text" placeholder="Name"/><br /><br />
+                    <input name="phone" required="required" type="text" placeholder="Phone number"/><br /><br />
+                    <input name="secret" required="required" type="text" placeholder="Secret question"/><br /><br />
+                    <input name="answer" required="required" type="text" placeholder="Answer"/><br /><br />
+                </fieldset>
+                <input type="submit" style="cursor: pointer" name="signup" onclick="signup()" value="Sign Up" />
+                <div class="utilities">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
