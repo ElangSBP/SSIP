@@ -1,7 +1,8 @@
 <?php
-// including the database connection file
+// load database configuration file
 include_once("../dbcon.php");
-//getting id from url
+
+//getting id from 
 $id_seeds = $_GET['id_seeds'];
  
 //selecting data associated with this particular id

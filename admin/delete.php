@@ -1,8 +1,8 @@
 <?php
-//including the database connection file
+//load database file configuration
 include("../dbcon.php");
  
-//getting id of the data from url
+//getting id of the data from input
 $id_seeds = $_GET['id_seeds'];
  
 //deleting the row from table

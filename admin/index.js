@@ -16,7 +16,7 @@ $('.next-button').hover(
 
 $('.next-button.email').click(
   function(){
-    console.log("Something");
+    console.log("Something Happened");
     $('.email-section').addClass("fold-up");
     $('.password-section').removeClass("folded");
   }
@@ -40,7 +40,7 @@ $('.next-button').hover(
 
 $('.next-button.password').click(
   function(){
-    console.log("Something");
+    console.log("Something Happened");
     $('.password-section').addClass("fold-up");
     $('.repeat-password-section').removeClass("folded");
   }
@@ -58,7 +58,7 @@ $('.repeat-password').on("change keyup paste",
 
 $('.next-button.repeat-password').click(
   function(){
-    console.log("Something");
+    console.log("Something Happened");
     $('.repeat-password-section').addClass("fold-up");
     $('.success').css("marginTop", 0);
   }

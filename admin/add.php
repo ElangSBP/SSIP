@@ -1,11 +1,13 @@
 <html>
     <head>
-        <title>Add Data</title>
+        <title>Add New Data</title>
     </head> 
     <body>
         <?php
-        //including the database connection file
+        //Load database configuration file
         include_once("../dbcon.php");
+
+        //upload configuration
         $folder = "uploads/";
         $upload_image = $folder . basename($_FILES["fileToUpload"]["name"]);
         
@@ -17,6 +19,7 @@
             $price = $_POST['price'];
             $description = $_POST['description'];
             
+        //Empty Checker
         } if(empty($name) || empty($price) ) {
                 
             if(empty($name)) {
@@ -34,7 +37,7 @@
             
             // if all the fields are filled (not empty) 
 
-            //insert data to database        
+            //insert data into database        
             $sql = "INSERT INTO bibit(name, price, description, imagePath) VALUES(:name, :price, :description, :imagePath)";
             $query = $conn->prepare($sql);
 

@@ -1,10 +1,10 @@
 <html>
     <head>
-        <title>Add Data</title>
+        <title>Add New Data </title>
     </head>
 
     <body>
-
+      <!--= Form Begin --> 
         <div class="container">  
             <form id="contact" action="add.php" method="post" name="form1" enctype="multipart/form-data">
                 <h3>Add Seeds</h3>
@@ -24,7 +24,7 @@
                                 else if(isset($_GET['fail']))
                                 {
                                     ?>
-                                    <label>Problem While File Uploading !</label>
+                                    <label>Problem While uploading File !</label>
                                     <?php
                                 }
                                 ?>
@@ -34,7 +34,7 @@
                     <tr> 
                         <td>
                             <fieldset>
-                                <input placeholder="Seed name" tabindex="2" type="text" name="name" required>
+                                <inp ut placeholder="Seed name" tabindex="2" type="text" name="name" required>
                             </fieldset>
                         </td>
                     </tr>
@@ -57,9 +57,11 @@
                 </table>
             </form>
         </div>
+        <!--= End Form --> 
     </body>
 </html>
 
+<!--= CSS Configuration --> 
 <style>
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 * {
