@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <!--= Basic Configuration =--> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initialscale=1.0">
+
         <title>Login page</title>
+
+        <!--= Load database configuration file =--> 
         <?php require('../dbcon.php'); ?>
+
         <title>Login Form</title>
+
+        <!--= Load CSS =--> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
+
+        <!--= Form Begin =--> 
         <div class="login">
             <form method="post" action="register.php">
                 <h2>Register</h2>
@@ -28,5 +39,7 @@
                 </div>
             </form>
         </div>
+        <!--= Form End =-->
+
     </body>
 </html>

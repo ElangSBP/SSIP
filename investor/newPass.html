@@ -1,19 +1,27 @@
 <html>
     <head>
+        <!--= Basic Configuration =--> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initialscale=1.0">
         <title>Login page</title>
+
+        <!--= Load Database Configuration File =--> 
         <?php require('../dbcon.php'); ?>
+        
     </head>
     <body>
+
+        <!--= Begin Form =--> 
         <center>
             <form method="post" action="newPass.php">
                 <h3>Insert New Password</h3>
-                Username: <input type="text" name="username" placeholder="username" required><br /><br />
+                Username: <input type="text" name="username" placeholder="Username" required><br /><br />
                 Password: <input name="password" required="required" type="password" placeholder="Password"/><br /><br />
                 Confirm Password: <input name="password2" required="required" type="password" placeholder="Type password again"/><br /><br />
                 <button type="submit" name="login">Submit</button>
             </form><hr ><br />
         </center>
+    <!--= End Form =--> 
+
     </body>
 </html>

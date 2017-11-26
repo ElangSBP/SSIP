@@ -1,19 +1,30 @@
 <?php
+
+    //Configuration 
 	$name = $_POST['name'];
     $quantity = $_POST['quantity'];
 	$price = $_POST['price'];
     $total = 0; $totalQuantity = 0;
     $location = $_POST['location'];
+    
 ?>
-<br />
+
+<br>
+
 <html>
     <head>
+
+        <!--= Basic Configuration =--> 
         <meta charset="UTF-8">
         <title>Seeds List</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
+
+        <!--= Load CSS =--> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">  
         <link rel="stylesheet" href="../admin/style.css">
+
     </head>
  
+    <!--= Table Start =--> 
     <body>
         <div class="table-user">
             <div class="header">Transaction</div>
@@ -68,4 +79,6 @@
             </form>
         </div>
     </body>
+    <!--= Table End =--> 
+
 </html>

@@ -1,10 +1,14 @@
 <?php
-// including the database connection file
+
+// Load Database Configuration File
 include_once("../dbcon.php");
-//getting id from url
+
+//set Variable total and catch data from total 
 $total = $_GET['total'];
+
 ?>
 
+<!--= Load CSS =--> 
 <link rel="stylesheet" href="../css/base.css">  
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/vendor.css"> 
@@ -23,13 +27,13 @@ $total = $_GET['total'];
                     <p> Your payment is: <br />
                         <b>Rp. <?php echo $total ?></b><br />
                         Owner bank account <br />
-                        <b>Naufa Nabila</b><br />
+                        <b>Naufal Nabila</b><br />
                         Account number:<br />
                         <b>123 456 7890</b><br />
                         Please send the prove of your transaction to <br />
                         <b>naufal.nabila.2008@gmail.com</b>
                     </p>
-                    <a href="../index.html">home</a>
+                    <a href="../index.html" class="btn-home">Home</a>
                 </center>
             </div>
         </div>

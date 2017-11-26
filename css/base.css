@@ -483,6 +483,10 @@ textarea {
 	width: 100%;
 }
 
+.btn-home{
+	background-color: white;
+}
+
 /**
  * small screens - (_grid.scss)
  * --------------------------------------------------------------- 

@@ -1,8 +1,8 @@
 <?php
-//including the database connection file
+//Include Database Configuration File
 include_once("../dbcon.php");
  
-//fetching data in descending order (lastest entry first)
+//fetching data in ascending order (latest entry first)
 $result = $conn->query("SELECT * FROM bibit ORDER BY id_seeds ASC");
 ?>
  
@@ -10,11 +10,13 @@ $result = $conn->query("SELECT * FROM bibit ORDER BY id_seeds ASC");
     <head>
         <meta charset="UTF-8">
         <title>Seeds List</title>
+        <!--= Load CSS =--> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
         <link rel="stylesheet" href="../admin/style.css">
     </head>
  
     <body>
+    <!--= Table Begin =-->
         <div class="table-user">
             <div class="header">Choose Product</div>
             <form action="order.php" method="POST">
@@ -27,15 +29,25 @@ $result = $conn->query("SELECT * FROM bibit ORDER BY id_seeds ASC");
                         <th>Price</th>
                     </tr>
                     <?php
+
+                    //Include Database Configuration File
                     include_once("../dbcon.php");
+
+                    //Preparing Data
                     $query = $conn->prepare('SELECT * FROM bibit');
                     $query->bindParam(':username', $username);
+
+                    //Execute Query
                     $query->execute();
                     $subtotal= 0;
                     $i = 1;
+
+                    //Upload Image and save it ti $image_name variable
                     while($row = $query->fetch(PDO::FETCH_ASSOC)){
                         $image_name = $row["imagePath"];
                     ?>
+
+                    <!--= Show Data -->
                     <tr>
                         <td><?php echo $i;?></td>
                         <td><?php echo $row['name']?><input type="hidden" name="name[]" value="<?php echo $row['name']?>"></td>
@@ -50,19 +62,24 @@ $result = $conn->query("SELECT * FROM bibit ORDER BY id_seeds ASC");
                         $i++;
                     }
                     ?>
+
                 </table>
+
                 <center>
-                    select location:
+                 <!--= Select Location =-->
+                    Select Location:
                     <select name="location" size="1">
-                        <option value="location1">location1</option>
-                        <option value="location2">location2</option>
-                        <option value="location3">location3</option>
-                        <option value="location4">location4</option>
-                        <option value="location5">location5</option>
+                        <option value="location1">Kebun Raya Bogor</option>
+                        <option value="location2">Jababeka Education Park</option>
+                        <option value="location3">Tangkuban Perahu</option>
+                        <option value="location4">Borneo Forest</option>
+                        <option value="location5">IS Academy</option>
                     </select>
+                <!--= End Select Location =--> 
                     <input type="submit" value="Order" />
                 </center>
             </form>
         </div>
+        <!--= Table End =-->
     </body>
 </html>
