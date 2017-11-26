@@ -67,7 +67,7 @@ $result = $conn->query("SELECT * FROM bibit ORDER BY id_seeds ASC");
 
                 <center>
                  <!--= Select Location =-->
-                    Select Location:
+                    Select Popular Location:
                     <select name="location" size="1">
                         <option value="location1">Kebun Raya Bogor</option>
                         <option value="location2">Jababeka Education Park</option>
@@ -75,6 +75,12 @@ $result = $conn->query("SELECT * FROM bibit ORDER BY id_seeds ASC");
                         <option value="location4">Borneo Forest</option>
                         <option value="location5">IS Academy</option>
                     </select>
+
+                <!--= Maps =-->
+                    <div class="maps"> 
+                    <a href="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBMImEiAycsrj_2d4gAEFTCl9gL6JZloKk"> 
+                    </div>
+
                 <!--= End Select Location =--> 
                     <input type="submit" value="Order" />
                 </center>
