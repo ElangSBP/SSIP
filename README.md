@@ -5,5 +5,5 @@ Group Member :
 - Miftahul
 - Prima
 - Ivan 
-- Cigra Z ? 
+- Cigra Z
 - Elang
